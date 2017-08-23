@@ -57,11 +57,22 @@ docker inspect cc_dev_server
 
 # 从镜像运行一个新容器
 ```
-docker run -it [REPOSITORY] /bin/bash
+docker run -it [IMAGE ID] /bin/bash
 ```
 例如:
 ```
 docker run -it cc_dev_server bash
+```
+需要使用systemd(systemctl), 否则提示"Failed to get D-Bus connection: Operation not permitted"
+```
+docker run -itd --privileged [IMAGE ID] init
+```
+映射22端口到38422端口
+```
+yum -y install openssh-server openssh-clients
+systemctl enable sshd.service
+systemctl start sshd.service
+docker run -d -p 38422:22 [IMAGE ID] /usr/sbin/sshd -D
 ```
 
 
@@ -147,5 +158,11 @@ docker pull docker.io/newidfordota/cc_dev_server:v2
 基于centos7, 安装了py3和vim  
 [镜像](https://hub.docker.com/r/newidfordota/cc_dev_server/)
 
+使用:
+> 任意安装一个docker宿主, 例如centos7, 参考https://get.daocloud.io/#install-docker
+安装docker:
+> curl -sSL https://get.daocloud.io/docker | sh
+加速器:
+> curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://0e9ecaa5.m.daocloud.io
 
 
