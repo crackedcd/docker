@@ -158,11 +158,14 @@ docker pull docker.io/newidfordota/cc_dev_server:v2
 基于centos7, 安装了py3和vim  
 [镜像](https://hub.docker.com/r/newidfordota/cc_dev_server/)
 
-使用:
-> 任意安装一个docker宿主, 例如centos7, 参考https://get.daocloud.io/#install-docker
-安装docker:
-> curl -sSL https://get.daocloud.io/docker | sh
-加速器:
-> curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://0e9ecaa5.m.daocloud.io
+使用:  
+> 任意安装一个docker宿主, 例如centos7, 参考https://get.daocloud.io/#install-docker  
+
+安装docker:  
+> curl -sSL https://get.daocloud.io/docker | sh  
+
+加速器:  
+> curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://0e9ecaa5.m.daocloud.io  
+
 
 
