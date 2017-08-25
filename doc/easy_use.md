@@ -137,3 +137,8 @@ docker push newidfordota/cc_dev_server
 docker pull newidfordota/cc_dev_server
 ```
 
+# 我的第一个docker镜像
+基于centos7, 安装了py3和vim [镜像](https://hub.docker.com/r/newidfordota/cc_dev_server/)
+
+
+
