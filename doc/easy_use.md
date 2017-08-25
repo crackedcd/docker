@@ -1,7 +1,10 @@
 # 概念
-> 镜像 -> 类
-> 容器 -> 对象
-> 运行中的镜像, 称作容器
+镜像 -> 类  
+
+容器 -> 对象  
+
+运行中的镜像, 称作容器  
+
 
 
 # 查找镜像模板
@@ -138,7 +141,8 @@ docker pull newidfordota/cc_dev_server
 ```
 
 # 我的第一个docker镜像
-基于centos7, 安装了py3和vim [镜像](https://hub.docker.com/r/newidfordota/cc_dev_server/)
+基于centos7, 安装了py3和vim  
+[镜像](https://hub.docker.com/r/newidfordota/cc_dev_server/)
 
 
 
