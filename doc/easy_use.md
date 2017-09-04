@@ -116,7 +116,10 @@ docker commit [CONTAINER ID] cc_django_server
 ```
 docker commit -m='django and scrapy dev server' -a='cc' 1bc40b1aa622 newidfordota/cc_dev_server
 ```
-
+更新镜像(加上了:v2标签来表示版本):
+```
+docker commit -m='update vim-plugins.' -a='cc' 1ac5ac962f96 docker.io/newidfordota/cc_dev_server:v2
+```
 
 # docker hub登录
 ```
@@ -126,18 +129,18 @@ docker login
 
 # docker 上传镜像
 ```
-docker pull [IMAGE NAME]
+docker push [IMAGE NAME][:TAG]
 ```
 这里的IMAGE NAME是用户名/镜像名, 例如:
 ```
-docker push newidfordota/cc_dev_server
+docker push docker.io/newidfordota/cc_dev_server:v2
 ```
 否则会提交到dockerHub的根, 没有权限
 
 
 # docker 下载镜像
 ```
-docker pull newidfordota/cc_dev_server
+docker pull docker.io/newidfordota/cc_dev_server:v2
 ```
 
 # 我的第一个docker镜像
